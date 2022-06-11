@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package com.grpc.server.interfaces;
+
+option java_multiple_files = true;
+option java_package = "com.grpc.server.interfaces";
+//option java_outer_classname = "HelloWorldProto";
+
+// The greeting service definition.
+service GreeterService {
+  // Sends a greeting
+  rpc greet (GreetRequest) returns (GreetResponse) {
+  }
+}
+
+// The request message containing the user's name.
+message GreetRequest {
+  string name = 1;
+}
+
+// The response message containing the greetings
+message GreetResponse {
+  string message = 1;
+}
